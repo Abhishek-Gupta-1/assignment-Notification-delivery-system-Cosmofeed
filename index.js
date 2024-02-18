@@ -5,13 +5,14 @@ const path = require("path");
 
 const app = express();
 
-app.use(express.static(path.join(__dirname, "cosmofeed")));
+// Set static path
+app.use(express.static(path.join(__dirname, "client")));
 
 app.use(bodyParser.json());
 
 const publicVapidKey =
-  "BFoJA2OEzKYJU8gSHmuLIXCH2dQQwUmo1SthcDJuQF3FT9VVjClBdsRovB4yoY5NFxISIQNKLNyAY0Lh84LXJs4";
-const privateVapidKey = "g0-0JVZhpEcGAqVt6dxClRISIziwoaGiJz2fcJI-Sc8";
+  "BJthRQ5myDgc7OSXzPCMftGw-n16F7zQBEN7EUD6XxcfTTvrLGWSIG7y_JxiWtVlCFua0S8MTB5rPziBqNx1qIo";
+const privateVapidKey = "3KzvKasA2SoCxsp0iIG_o9B0Ozvl1XDwI63JRKNIWBM";
 
 webpush.setVapidDetails(
   "mailto:Cosmofeed@test.com",
@@ -31,8 +32,8 @@ app.post("/subscribe", (req, res) => {
     .catch((err) => console.error(err));
 });
 
-app.listen(9000, () => {
+app.listen(4000, () => {
   console.log(
-    "Server is running on port 9000, Refresh the website to get notification"
+    "Server is running on port 4000, Refresh the website to get notification"
   );
 });
