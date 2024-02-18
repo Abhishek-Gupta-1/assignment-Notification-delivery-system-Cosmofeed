@@ -1,5 +1,5 @@
 Web based Notification delivery system
-=> This System is trigger by webite refresh
+=> This System is trigger by website refresh
 
 Recommended website : Mozilla Firefox ( Make sure your System Notification is On : System > Notification > Mozilla Firefox(or any other browser))
 
